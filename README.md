@@ -90,7 +90,7 @@ git clone https://github.com/KiloNovemberDelta/IPSANavigation
 Then we build and source the code
 
 ```bash
-cd ~/Documents/GAZEBO/
+cd ~/Documents/GAZEBO/IPSANavigation
 catkin_make install
 source devel/setup.bash
 ```
