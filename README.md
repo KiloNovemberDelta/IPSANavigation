@@ -84,7 +84,7 @@ We create a folder "GAZEBO" within the "Documents" folder. There, we copy the co
 cd ~/Documents/
 mkdir GAZEBO
 cd GAZEBO
-git clone https://github.com/KiloNovemberDelta/Navigation
+git clone https://github.com/KiloNovemberDelta/IPSANavigation
 ```
 
 Then we build and source the code
