@@ -21,6 +21,7 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 sudo apt update
 
 sudo apt install ros-melodic-desktop-full
+
 	
 sudo rosdep init
 
@@ -35,8 +36,6 @@ Running test :
 source ~/.bashrc
 roscore & rosrun gazebo_ros gazebo
 ```
-
-
 
 * **Ubuntu 16.04 LTS Xenial**
 
@@ -72,6 +71,14 @@ Install rospy for Python3
 ```bash
 sudo pip3 install rospkg
 ```
+
+## Debug during installation :
+
+* When doing `sudo rosdep init`, you have the following error : "rosdep not found". Please do : `sudo apt-get install python-rosdep`
+
+* If doing `roscore & rosrun gazebo_ros gazebo` leads to a writing error, try : 
+
+  `sudo chown -R $USER ~/.ros`
 
 
 
