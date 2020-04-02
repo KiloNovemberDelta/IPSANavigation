@@ -1,4 +1,6 @@
-<h1>Requirement</h1>
+# IPSANavigation Project
+
+## Requirement
 
 Basic Installation. Go to your terminal (CTRL+ALT+T), and write the following command. You need a password the first time you use the command sudo (superuser do). 
 
@@ -22,12 +24,15 @@ sudo apt update
 
 sudo apt install ros-melodic-desktop-full
 
+sudo apt-get install python-rosdep
 	
 sudo rosdep init
 
-sudo rosdep update
+rosdep update
 
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+
+sudo chown -R $USER ~/.ros
 ```
 
 Running test : 
@@ -49,12 +54,16 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 sudo apt update
 
 sudo apt install ros-kinetic-desktop-full
+
+sudo apt-get install python-rosdep
 	
 sudo rosdep init
 
-sudo rosdep update
+rosdep update
 
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+
+sudo chown -R $USER ~/.ros
 ```
 
 Running test :
@@ -72,18 +81,9 @@ Install rospy for Python3
 sudo pip3 install rospkg
 ```
 
-## Debug during installation :
-
-* When doing `sudo rosdep init`, you have the following error : "rosdep not found". Please do : `sudo apt-get install python-rosdep`
-
-* If doing `roscore & rosrun gazebo_ros gazebo` leads to a writing error, try : 
-
-  `sudo chown -R $USER ~/.ros`
 
 
-
-
-<h1>Run the code </h1>
+## Run the code
 
 We create a folder "GAZEBO" within the "Documents" folder. There, we copy the code. 
 
@@ -113,6 +113,15 @@ In another terminal, run the behavior of the robot (in the "Controller" folder)
 python3 main.py
 ```
 
+## Goal's project
 
+The robot starts from a specific location (described in the launch file) and has to reach the green platform. But, obviously, it has to avoid obstacle in the map. 
+
+The robot has a single input, a sonar, and two outputs (like a car, a straight velocity and a desired speed angle). 
+
+It is up to you to : 
+
+* Implement a navigation strategy into the the controller (/Controller/main.py) 
+* Design the map by adding/moving obstacle to validate your strategy 
 
 ![Simulation Environment](https://github.com/KiloNovemberDelta/Navigation/blob/master/pic.png)
