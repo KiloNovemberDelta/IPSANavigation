@@ -124,4 +124,6 @@ It is up to you to :
 * Implement a navigation strategy into the the controller (/Controller/main.py) 
 * Design the map by adding/moving obstacle to validate your strategy 
 
+To have the list of topics (especially the robot position), have a look on Google about linux command for ROS. 
+
 ![Simulation Environment](https://github.com/KiloNovemberDelta/Navigation/blob/master/pic.png)
